@@ -103,13 +103,13 @@ Public scores refers to the scores using the 'testing' dataset, whilst 'private'
 
 
 References:
-[1] http://machinelearningmastery.com/an-introduction-to-feature-selection/
-[2] https://www.kaggle.com/c/santander-customer-satisfaction
-[3] https://github.com/diefimov/santander_2016/blob/master/README.pdf
-[4] https://en.wikipedia.org/wiki/Random_forest
-[5] https://github.com/ctufts/Cheat_Sheets/wiki/Classification-Model-Pros-and-Cons
-[6] http://www.investopedia.com/terms/c/churnrate.asp
-[7] https://en.wikipedia.org/wiki/Churn_rate
+    [1] http://machinelearningmastery.com/an-introduction-to-feature-selection/
+    [2] https://www.kaggle.com/c/santander-customer-satisfaction
+    [3] https://github.com/diefimov/santander_2016/blob/master/README.pdf
+    [4] https://en.wikipedia.org/wiki/Random_forest
+    [5] https://github.com/ctufts/Cheat_Sheets/wiki/Classification-Model-Pros-and-Cons
+    [6] http://www.investopedia.com/terms/c/churnrate.asp
+    [7] https://en.wikipedia.org/wiki/Churn_rate
 
 -----------
 
