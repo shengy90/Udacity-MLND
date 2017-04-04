@@ -7,14 +7,14 @@ Sheng Chai
 
 ### Domain Background
 
-This Capstone Project is inspired by the competition Santander hosted on Kaggle back in 2016. The aim of the project is to help Santander identify which customers are more likely to be unhappy so that the bank can take proactive steps to reduce customer churn rates by getting in touch with unhappy customers to improve the relationship so they won't leave the bank in the future.
+This Capstone Project is inspired by the competition Santander hosted on Kaggle back in 2016. The aim of the project is to help Santander identify which customers are more likely to be unhappy so that the bank can take proactive steps to reduce customer churn rates by getting in touch with unhappy customers to improve the relationship so they won't leave the bank in the future. [1]
 
 Background on churn (attrition) rates:
-Churn rate refers to the dropout rate of a customers, i.e. what % of customers that stopped/ ended their relationship with a company. Company's success largely depends on the size of their customer base - the bigger their customer base is, the higher their revenue is going to be. In order for a customer to successfully grow their customer base, the customer growth rate (rate of acquiring new customer) must be higher than their customer churn rate (rate of existing customers ending their relationship).
+Churn rate refers to the dropout rate of a customers, i.e. what % of customers that stopped/ ended their relationship with a company [2]. Company's success largely depends on the size of their customer base - the bigger their customer base is, the higher their revenue is going to be. In order for a customer to successfully grow their customer base, the customer growth rate (rate of acquiring new customer) must be higher than their customer churn rate (rate of existing customers ending their relationship).
 
 Santander has sought the Kaggle's community help to identify customers that are more likely to leave the company so that the Bank can take active steps to improve the relationship before it's too late to improve customer loyalty and thus reducing churn rates.
 
-In this competition, you'll work with hundreds of anonymized features to predict if a customer is satisfied or dissatisfied with their banking experience.
+In this competition, hundreds of anonymized features were provided to allow us to build a model that predicts if a customer is satisfied or dissatisfied with their banking experience[1].
 
 In this section, provide brief details on the background information of the domain from which the project is proposed. Historica
 ### Problem Statement
@@ -53,9 +53,9 @@ _(approximately 1-2 paragraphs)_
 
 As this competition was held in 2016 on data (and has now concluded), there are many existing solutions that we can benchmark our prediction against. Currently,the best score is held by 'Shize & Nir' with an AUC score of 0.829072.
 
-The team that won the first place didn't upload their solutions on to Kaggle. However, I've found the solution for the third-prize on Kaggle and their model could be use as a suitable benchmark.
+The team that won the first place didn't upload their solutions on to Kaggle. However, I've found the solution [4] for the third-prize on Kaggle and their model could be use as a suitable benchmark.
 
-https://github.com/diefimov/santander_2016/blob/master/README.pdf
+https://github.com/diefimov/santander_2016/blob/master/README.pdf 
 
 As this is a Kaggle competition, we would be solving the same problem and would be using the same evaluation metric (which will be covered in the next paragraph) to compare our model against each other. In this particular case, the metric specified by Santander is the area under the ROC curve.
 
@@ -74,20 +74,20 @@ Apart from the area under the ROC curve, there are other metrics that can be use
 ##### Part 1: Exploring the data
 The dataset consists of 370 variables, which may be categorical or discrete. Because the dataset is anonymised, we have no information on what each variable means. Therefore, we cannot decide whether or not we should include/ exclude a column just by looking at the column name. Instead, we might have to look at each individual variable, then look at the relationship between each variable vs the target to understand what's in each column and if there are any correlation between the variables and the target.
 
-However, because of the large number of variables, manual investigation may be very inefficient. Instead of investigating each variable manually, we could look to some automated feature selection strategy such using random forest or other methods to determine the 'feature importance' which can help us to prune the amount of features.
+However, because of the large number of variables, manual investigation may be very inefficient. Instead of investigating each variable manually, we could look to some automated feature selection strategy such using random forest or other methods to determine the 'feature importance' which can help us to prune the amount of features[3].
 
 ##### Part 2: Feature Engineering
 After getting rid of redundant features, we can then engineer new features if necssary to create more predictive features. Depending on the amount of features, we can also use some dimensionality reduction methods such as PCA to engineer new features and reduce the amount of redundant features.
 
 ##### Part 3: Train the model
-We can start creating the model after we have obtain a list of useful features that we can use to create our model. Because this is a binary classification task, we can use many different classifiers to create our binary classifier. Example of classifiers are:
+We can start creating the model after we have obtain a list of useful features that we can use to create our model. Because this is a binary classification task, we can use many different classifiers to create our binary classifier. Example of classifiers are[6]:
 
  - Logistic Classifier : logistic classifer is great for creating binary classifiers, especially if we're trying to solve a linear problem. However, depending on the features we've decided to use, there might be some non-linearity in our features and logistic regression might not be able to cope so well.
  
  - Neural Network Classifier : neural network is great for finding hidden patterns in our dataset and is great for classification tasks, especially if there is non-linearity in the dataset. However, neural network is computationally expensive, and can be prone to overfitting. However, there are many methods we can deal with overfitness, such as 'dropouts' which is a commonly used technique in deep learning.
  
  - Decision tree classifiers : decision tree classifier is great for classification tasks and can be easily interpreted. However it's very unstable as just a slight purturbation in the dataset can result in a very different-looking tree. However there are many variations of decision tree classifiers that can be used to address the over-fitness e.g.:
-     -- Random Forest
+     -- Random Forest[5]
      -- Bagged Trees
      -- Boosted Trees
 
@@ -103,13 +103,15 @@ Public scores refers to the scores using the 'testing' dataset, whilst 'private'
 
 
 References:
- 1. http://machinelearningmastery.com/an-introduction-to-feature-selection/
- 2. https://www.kaggle.com/c/santander-customer-satisfaction
- 3. https://github.com/diefimov/santander_2016/blob/master/README.pdf
- 4. https://en.wikipedia.org/wiki/Random_forest
- 5. https://github.com/ctufts/Cheat_Sheets/wiki/Classification-Model-Pros-and-Cons
- 6. http://www.investopedia.com/terms/c/churnrate.asp
- 7. https://en.wikipedia.org/wiki/Churn_rate
+
+ 1. https://www.kaggle.com/c/santander-customer-satisfaction
+ 2. http://www.investopedia.com/terms/c/churnrate.asp
+ 3. http://machinelearningmastery.com/an-introduction-to-feature-selection/
+ 4. https://github.com/diefimov/santander_2016/blob/master/README.pdf
+ 5. https://en.wikipedia.org/wiki/Random_forest
+ 6. https://github.com/ctufts/Cheat_Sheets/wiki/Classification-Model-Pros-and-Cons
+
+
 
 -----------
 
